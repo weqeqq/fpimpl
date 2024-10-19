@@ -11,7 +11,7 @@
         packages = rec {
           fpimpl = stdenv.mkDerivation {
             pname = "FPImpl";
-            version = "0.1.0";
+            version = "0.1.1";
             src = ./.;
 
             nativeBuildInputs = [ cmake ];

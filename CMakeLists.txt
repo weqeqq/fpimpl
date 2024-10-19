@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.23)
 
 project(FPImpl
-  VERSION      0.1.0
+  VERSION      0.1.1
   LANGUAGES    CXX
   DESCRIPTION "Fast PImpl Implementation"
   HOMEPAGE_URL "https://github.com/weqeq/fpimpl")
