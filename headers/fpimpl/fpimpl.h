@@ -33,7 +33,7 @@ class FPImpl {
     return *this;
   }
   FPImpl<Type, Size, Alignment> &
-  operator=(const FPImpl<Type, Size, Alignment> &&rhs) {
+  operator=(FPImpl<Type, Size, Alignment> &&rhs) {
     if (this != &rhs) {
       *GetStorage() = std::move(*rhs);
     }
