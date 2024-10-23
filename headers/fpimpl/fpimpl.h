@@ -1,5 +1,5 @@
-#ifndef FPIMPL
-#define FPIMPL
+#ifndef FPIMPL_H
+#define FPIMPL_H
 
 #include <cstdint>
 #include <utility>
@@ -50,7 +50,7 @@ class FPImpl {
   const Type *GetStorage() const { return reinterpret_cast<const Type *>(&storage); }
 };
 
-#define FPIMPL_DECLARE_IMPL(size, alignment)     \
+#define FPIMPL(size, alignment)                  \
   class Impl;                                    \
   static constexpr std::size_t  size, alignment; \
   FPImpl<Impl, Size, Alignment> impl_
