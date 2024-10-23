@@ -55,4 +55,20 @@ class FPImpl {
   static constexpr std::size_t  size, alignment; \
   FPImpl<Impl, Size, Alignment> impl_
 
+#define FPIMPL_DECLARE_DEFAULT(class_name)   \
+  class_name();                              \
+  class_name(const class_name &);            \
+  class_name(class_name &&);                 \
+  ~class_name();                             \
+  class_name &operator=(const class_name &); \
+  class_name &operator=(class_name &&)
+
+#define FPIMPL_DEFINE_DEFAULT(class_name)                          \
+  class_name::class_name()                              = default; \
+  class_name::class_name(const class_name &)            = default; \
+  class_name::class_name(class_name &&)                 = default; \
+  class_name::~class_name()                             = default; \
+  class_name &class_name::operator=(const class_name &) = default; \
+  class_name &class_name::operator=(class_name &&)      = default;
+
 #endif
