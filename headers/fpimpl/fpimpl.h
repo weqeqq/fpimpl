@@ -50,4 +50,9 @@ class FPImpl {
   const Type *GetStorage() const { return reinterpret_cast<const Type *>(&storage); }
 };
 
+#define POINTER_TO_IMPLEMENTATION(size, alignment) \
+  class Impl;                                      \
+  static constexpr std::size_t  size, alignment;   \
+  FPImpl<Impl, Size, Alignment> impl_
+
 #endif
