@@ -2,6 +2,7 @@
 #define FPIMPL_H
 
 #include <cstdint>
+#include <new>
 #include <utility>
 
 template <typename Type,
